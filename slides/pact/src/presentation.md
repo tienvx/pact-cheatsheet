@@ -43,54 +43,179 @@ Tien Vo | Developer | August 13, 2023
 
 [comment]: # (!!! data-auto-animate)
 
-## What is Pact?
+## Code-first vs Design-first
 
 - Code-first: contract is generated from (contract test) code
 
 [comment]: # (!!! data-auto-animate)
 
-## What is Pact?
+## Code-first vs Design-first
 
 - Code-first: contract is generated from (contract test) code
 - Design-first: contract is generated from api design
 
 [comment]: # (!!! data-auto-animate)
 
-## What is Pact?
+## Consumer-driven vs Provider-driven
 
 - Consumer-driven: consumer write contract, provider test implementation against it
 
 [comment]: # (!!! data-auto-animate)
 
-## What is Pact?
+## Consumer-driven vs Provider-driven
 
 - Consumer-driven: consumer write contract, provider test implementation against it
 - Provider-driven: provider write contract, consumer test implementation against it
 
 [comment]: # (!!! data-auto-animate)
 
-## What is Pact?
-
-- Schema: all possible combinations of fields an API can accept and return
-
-[comment]: # (!!! data-auto-animate)
-
-## What is Pact?
-
-- Schema: all possible combinations of fields an API can accept and return
-- Contract: one single combination of fields an API can accept and return
-
-[comment]: # (!!! data-auto-animate)
-
-## Code-first Consumer-driven
+## Code-first + Consumer-driven
 
 ![code-first consumer-driven](https://miro.medium.com/v2/resize:fit:720/format:webp/1*aSzw1aA8Ef8ruCbcNjA2Lg.png)
+
+[comment]: # (Image source: https://medium.com/coderbyte/design-first-contract-testing-for-micro-services-baf929e29f6c)
 
 [comment]: # (!!!)
 
 ## Design-first
 
 ![design-first](https://miro.medium.com/v2/resize:fit:720/format:webp/1*LV9FwYBT8WSDAD0O9yG1QQ.png)
+
+[comment]: # (Image source: https://medium.com/coderbyte/design-first-contract-testing-for-micro-services-baf929e29f6c)
+
+[comment]: # (!!!)
+
+## Schema vs Contract
+
+- Schema: Abstract
+
+[comment]: # (!!! data-auto-animate)
+
+## Schema vs Contract
+
+- Schema: Abstract
+- Contract: Concrete
+
+[comment]: # (!!! data-auto-animate)
+
+## Schema vs Contract
+
+- Schema: All possible states of api
+
+[comment]: # (!!! data-auto-animate)
+
+## Schema vs Contract
+
+- Schema: All possible states of api
+- Contract: Single state of api
+
+[comment]: # (!!! data-auto-animate)
+
+## Schema vs Contract
+
+- Schema: Define once, use multiple times
+
+[comment]: # (!!! data-auto-animate)
+
+## Schema vs Contract
+
+- Schema: Define once, use multiple times
+- Contract: Define once, use once
+
+[comment]: # (!!! data-auto-animate)
+
+## Schema vs Contract
+
+```js [1|2,10|3|4|5|6|7|8|9]
+GET /users/1
+{
+    "uuid": "string", // regex ^[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}$
+    "first": "string",
+    "last": "string",
+    "full": "string",
+    "gender": "string", // ["male", "female", "other"]
+    "age": "number",
+    "email": "string" | null,
+}
+```
+
+[comment]: # (!!!)
+
+## Schema vs Contract
+
+| User   | Admin      | Admin      | Notification    |
+| ------ | ------     | ------     | ------          |
+| uuid   | /edit-user | /show-user |                 |
+| first  | /edit-user |            |                 |
+| last   | /edit-user |            | birth-day-email |
+| full   |            | /show-user |                 |
+| gender | /edit-user | /show-user |                 |
+| age    | /edit-user | /show-user | birth-day-email |
+| email  | /edit-user | /show-user | birth-day-email |
+
+[comment]: # (!!!)
+
+## Schema vs Contract
+
+| User   | Admin      | Admin      | Notification    |
+| ------ | ------     | ------     | ------          |
+| uuid   | /edit-user | /show-user |                 |
+| first  | /edit-user | /show-user |                 |
+| last   | /edit-user | /show-user | birth-day-email |
+| full   |            |            |                 |
+| gender | /edit-user | /show-user |                 |
+| age    | /edit-user | /show-user | birth-day-email |
+| email  | /edit-user | /show-user | birth-day-email |
+
+[comment]: # (!!!)
+
+## Schema vs Contract
+
+- Schema: Allow optional field
+
+[comment]: # (!!! data-auto-animate)
+
+## Schema vs Contract
+
+- Schema: Allow optional field
+- Contract: Don't allow optional field
+
+[comment]: # (!!! data-auto-animate)
+
+## Schema vs Contract
+
+- Schema: Allow empty array
+
+[comment]: # (!!! data-auto-animate)
+
+## Schema vs Contract
+
+- Schema: Allow empty array
+- Contract: Don't allow empty array
+
+[comment]: # (!!! data-auto-animate)
+
+## Optional Field
+
+```patch
+GET /users/1
+{
+-    "email": "string" | null,
++    "emailAddress": "string" | null,
+}
+```
+
+[comment]: # (!!!)
+
+## Empty Array
+
+```patch
+GET /users/1
+{
+-    "related": "User[]",
++    "children": "User[]",
+}
+```
 
 [comment]: # (!!!)
 
@@ -129,3 +254,4 @@ Tien Vo | Developer | August 13, 2023
 [comment]: # (Link introduce pact: https://docs.pact.io/#consumer-driven-contracts)
 [comment]: # (Link compare schema to contract: https://pactflow.io/blog/schemas-are-not-contracts/)
 [comment]: # (Link introduce to design-first contract testing: https://medium.com/coderbyte/design-first-contract-testing-for-micro-services-baf929e29f6c)
+[comment]: # (Link explain why no support for optional attribute: https://docs.pact.io/faq#why-is-there-no-support-for-specifying-optional-attributes)
