@@ -219,6 +219,137 @@ GET /users/1
 
 [comment]: # (!!!)
 
+## Why Pact?
+
+- Save development time
+
+[comment]: # (!!! data-auto-animate)
+
+## Why Pact?
+
+- Save development time
+- Save deployment time
+
+[comment]: # (!!! data-auto-animate)
+
+## Why Pact?
+
+- Save development time
+    - Provide fast feedback loop
+- Save deployment time
+
+[comment]: # (!!! data-auto-animate)
+
+## Why Pact?
+
+- Save development time
+    - Provide fast feedback loop
+    - Show exactly where is the problem
+- Save deployment time
+
+[comment]: # (!!! data-auto-animate)
+
+## Why Pact?
+
+- Save development time
+    - Provide fast feedback loop
+    - Show exactly where is the problem
+    - Debug problem locally
+- Save deployment time
+
+[comment]: # (!!! data-auto-animate)
+
+## Why Pact?
+
+- Save development time
+    - Provide fast feedback loop
+    - Show exactly where is the problem
+    - Debug problem locally
+    - Ensure only required API are developed
+- Save deployment time
+
+[comment]: # (!!! data-auto-animate)
+
+## Why Pact?
+
+- Save development time
+    - Provide fast feedback loop
+    - Show exactly where is the problem
+    - Debug problem locally
+    - Ensure only required API are developed
+    - Spend time focus on environmental related bug rather than integration bug
+- Save deployment time
+
+[comment]: # (!!! data-auto-animate)
+
+## Why Pact?
+
+- Save development time
+    - Provide fast feedback loop
+    - Show exactly where is the problem
+    - Debug problem locally
+    - Ensure only required API are developed
+    - Spend time focus on environmental related bug rather than integration bug
+- Save deployment time
+    - Replace and run faster than integration tests
+
+[comment]: # (!!! data-auto-animate)
+
+## Pyramid without Contract
+
+![pyramid-without-contract](https://s3-ap-southeast-2.amazonaws.com/content-prod-529546285894/2022/09/Unbalanced-Test-Pyramid---Without-Contract-Testing.png)
+
+[comment]: # (Image source: https://pactflow.io/blog/contract-testing-vs-integration-testing/)
+
+[comment]: # (!!!)
+
+## Pyramid with Contract
+
+![pyramid-with-contract](https://s3-ap-southeast-2.amazonaws.com/content-prod-529546285894/2022/09/Rebalanced-Pyramid---With-Contract-Testing-compact.png)
+
+[comment]: # (Image source: https://pactflow.io/blog/contract-testing-vs-integration-testing/)
+
+[comment]: # (!!!)
+
+## Unit vs Contract vs Integration vs E2E
+
+[Comparation](https://pactflow.io/blog/contract-testing-vs-integration-testing/) of different testing techniques
+
+[comment]: # (!!!)
+
+## Testing Techniques Scope
+
+| Technique    | Service CI/CD | Test Environment |
+| ------       | ------        | ------           |
+| unit         | x             |                  |
+| contract     | x             |                  |
+| integration  | x             |                  |
+| application  | x             |                  |
+| integration? |               | x                |
+| e2e api      |               | x                |
+| e2e ui       |               | x                |
+
+[comment]: # (!!!)
+
+## Contract vs E2E
+
+| Attribute    | Contract          | E2E              |
+| ------       | ------            | ------           |
+| when         | before deployment | after deployment |
+| speed        | fast              | slow             |
+| coordination | easy              | hard             |
+| complexity   | linear            | non-linear       |
+
+[comment]: # (!!!)
+
+## Contract vs E2E Complexity
+
+![contract-vs-e2e-complexity](media/contract-vs-e2e-complexity.svg)
+
+[comment]: # (Image source: https://docs.pact.io/faq/convinceme)
+
+[comment]: # (!!!)
+
 ## Terms
 
 - Pacticipant
