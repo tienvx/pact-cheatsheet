@@ -3,6 +3,14 @@
 [comment]: # (THEME = white)
 [comment]: # (CODE_THEME = base16/zenburn)
 
+[comment]: # (Introduce to pact: https://docs.pact.io/#consumer-driven-contracts)
+[comment]: # (Compare schema to contract: https://pactflow.io/blog/schemas-are-not-contracts/)
+[comment]: # (Introduce to design-first contract testing: https://medium.com/coderbyte/design-first-contract-testing-for-micro-services-baf929e29f6c)
+[comment]: # (Explain why no support for optional attribute: https://docs.pact.io/faq#why-is-there-no-support-for-specifying-optional-attributes)
+[comment]: # (Convince to use Pact: https://docs.pact.io/faq/convinceme)
+[comment]: # (List of situations when to use or not to use Pact: https://docs.pact.io/getting_started/what_is_pact_good_for)
+[comment]: # (List of terms: https://docs.pact.io/getting_started/terminology)
+
 Tien Vo | Developer | August 13, 2023
 
 # Pact
@@ -189,15 +197,16 @@ GET /users/1
 
 ## Testing Techniques Scope
 
-| Technique    | Service CI/CD | Test Environment |
-| ------       | ------        | ------           |
-| unit         | x             |                  |
-| contract     | x             |                  |
-| integration  | x             |                  |
-| application  | x             |                  |
-| integration? |               | x                |
-| e2e api      |               | x                |
-| e2e ui       |               | x                |
+| Technique    | Backend CI/CD | Frontend CI/CD | Test Environment |
+| ------       | ------        | ------         | ------           |
+| unit         | x             | x              |                  |
+| contract     | x             | x              |                  |
+| integration  | x             |                |                  |
+| application  | x             |                |                  |
+| component    |               | x              |                  |
+| e2e          |               | x              |                  |
+| e2e api      |               |                | x                |
+| e2e ui       |               |                | x                |
 
 [comment]: # (!!!)
 
@@ -248,125 +257,125 @@ GET /users/1
 
 ## Terms
 
-- Pacticipant  <!-- .element: class="strike fragment" -->
-- Consumer  <!-- .element: class="fragment" -->
-- Provider  <!-- .element: class="fragment" -->
-- Broker  <!-- .element: class="fragment" -->
+- ~~Pacticipant~~
+    - Consumer
+    - Provider
+- Broker
 
 [comment]: # (!!! data-auto-animate)
 
 ## Terms
 
-- Integration  <!-- .element: class="fragment" -->
-    - Pact  <!-- .element: class="fragment" -->
-        - Interaction  <!-- .element: class="fragment" -->
+- Integration
+    - Pact
+        - Interaction
 
 [comment]: # (!!! data-auto-animate)
 
 ## Terms
 
-- Specification  <!-- .element: class="fragment" -->
-    - 1  <!-- .element: class="fragment" -->
-    - 1.1  <!-- .element: class="fragment" -->
-    - 2  <!-- .element: class="fragment" -->
-    - 3  <!-- .element: class="fragment" -->
-    - 4  <!-- .element: class="fragment" -->
+- Specification
+    - 1
+    - 1.1
+    - 2
+    - 3
+    - 4
 
 [comment]: # (!!! data-auto-animate)
 
 ## Terms
 
-- Matcher  <!-- .element: class="fragment" -->
-    - equality  <!-- .element: class="fragment" -->
-    - regex  <!-- .element: class="fragment" -->
-    - type  <!-- .element: class="fragment" -->
-    - include  <!-- .element: class="fragment" -->
-    - integer  <!-- .element: class="fragment" -->
-    - decimal  <!-- .element: class="fragment" -->
-    - number  <!-- .element: class="fragment" -->
-    - datetime  <!-- .element: class="fragment" -->
-    - ...  <!-- .element: class="fragment" -->
+- Matcher
+    - equality
+    - regex
+    - type
+    - include
+    - integer
+    - decimal
+    - number
+    - datetime
+    - ...
 
 [comment]: # (!!! data-auto-animate)
 
 ## Terms
 
-- Generator  <!-- .element: class="fragment" -->
-    - RandomInt  <!-- .element: class="fragment" -->
-    - RandomDecimal  <!-- .element: class="fragment" -->
-    - RandomHexadecimal  <!-- .element: class="fragment" -->
-    - RandomString  <!-- .element: class="fragment" -->
-    - Regex  <!-- .element: class="fragment" -->
-    - Uuid  <!-- .element: class="fragment" -->
-    - Date  <!-- .element: class="fragment" -->
-    - Time  <!-- .element: class="fragment" -->
-    - ...  <!-- .element: class="fragment" -->
+- Generator
+    - RandomInt
+    - RandomDecimal
+    - RandomHexadecimal
+    - RandomString
+    - Regex
+    - Uuid
+    - Date
+    - Time
+    - ...
 
 [comment]: # (!!! data-auto-animate)
 
 ## Terms
 
-- Provider Verification  <!-- .element: class="fragment" -->
-- Consumer Version Selectors  <!-- .element: class="fragment" -->
-    - { "mainBranch": true }  <!-- .element: class="fragment highlight" -->
-    - { "branch": "\<branch\>" }  <!-- .element: class="fragment highlight" -->
-    - { "deployedOrReleased": true }  <!-- .element: class="fragment highlight" -->
-    - { "matchingBranch": true }  <!-- .element: class="fragment highlight" -->
-- Provider States  <!-- .element: class="fragment" -->
+- Provider Verification
+- Consumer Version Selectors
+    - { "mainBranch": true }
+    - { "branch": "\<branch\>" }
+    - { "deployedOrReleased": true }
+    - { "matchingBranch": true }
+- Provider States
 
 [comment]: # (!!! data-auto-animate)
 
 ## Terms
 
-- Tag  <!-- .element: class="strike fragment" -->
-- Version (git sha)   <!-- .element: class="fragment" -->
-- Branch  <!-- .element: class="fragment" -->
-- Environment  <!-- .element: class="fragment" -->
+- ~~Tag~~
+- Version (git sha)
+- Branch
+- Environment
 
 [comment]: # (!!! data-auto-animate)
 
 ## Terms
 
-- Deployment  <!-- .element: class="fragment" -->
-    - Application Instance  <!-- .element: class="fragment" -->
-- Release  <!-- .element: class="fragment" -->
-- "Can I Deploy?" Tool  <!-- .element: class="fragment" -->
-- Webhook  <!-- .element: class="fragment" -->
+- Deployment
+    - Application Instance
+- Release
+- "Can I Deploy?" Tool
+- Webhook
 
 [comment]: # (!!! data-auto-animate)
 
 ## Terms
 
-- Interaction Types  <!-- .element: class="fragment" -->
-    - Synchronous/HTTP -> REST (JSON/HTTP), SOAP (XML/HTTP), JSON-RPC, GraphQL  <!-- .element: class="fragment" -->
-    - Asynchronous/Messages -> RabbitMQ, Kafka, Fire and Forget, Server Push  <!-- .element: class="fragment" -->
-    - Synchronous/Messages -> gRPC/protobufs, Websockets, MQTT, Data Pipelines, AWS Lambda  <!-- .element: class="fragment" -->
+- Interaction Types
+    - Synchronous/HTTP -> REST (JSON/HTTP), SOAP (XML/HTTP), JSON-RPC, GraphQL
+    - Asynchronous/Messages -> RabbitMQ, Kafka, Fire and Forget, Server Push
+    - Synchronous/Messages -> gRPC/protobufs, Websockets, MQTT, Data Pipelines, AWS Lambda
 
 [comment]: # (!!! data-auto-animate)
 
 ## Terms
 
-- Protocols  <!-- .element: class="fragment" -->
-    - HTTP  <!-- .element: class="fragment" -->
-    - Message  <!-- .element: class="fragment" -->
-    - Protobuf  <!-- .element: class="fragment" -->
-    - GraphQL  <!-- .element: class="fragment" -->
+- Protocols
+    - HTTP
+    - Message
+    - Protobuf
+    - GraphQL
 
 [comment]: # (!!! data-auto-animate)
 
 ## Terms
 
-- Transports  <!-- .element: class="fragment" -->
-    - gRPC  <!-- .element: class="fragment" -->
-    - Websockets  <!-- .element: class="fragment" -->
+- Transports
+    - gRPC
+    - Websockets
 
 [comment]: # (!!! data-auto-animate)
 
 ## Terms
 
-- Plugins  <!-- .element: class="fragment" -->
-    - CSV  <!-- .element: class="fragment" -->
-    - Protobuf  <!-- .element: class="fragment" -->
+- Plugins
+    - CSV
+    - Protobuf
 
 [comment]: # (!!! data-auto-animate)
 
@@ -524,10 +533,8 @@ $this->assertTrue($verifier->verify());
 - CI flow
 - Webhook
 
-[comment]: # (Introduce to pact: https://docs.pact.io/#consumer-driven-contracts)
-[comment]: # (Compare schema to contract: https://pactflow.io/blog/schemas-are-not-contracts/)
-[comment]: # (Introduce to design-first contract testing: https://medium.com/coderbyte/design-first-contract-testing-for-micro-services-baf929e29f6c)
-[comment]: # (Explain why no support for optional attribute: https://docs.pact.io/faq#why-is-there-no-support-for-specifying-optional-attributes)
-[comment]: # (Convince to use Pact: https://docs.pact.io/faq/convinceme)
-[comment]: # (List of situations when to use or not to use Pact: https://docs.pact.io/getting_started/what_is_pact_good_for)
-[comment]: # (List of terms: https://docs.pact.io/getting_started/terminology)
+[comment]: # (!!!)
+
+## Demo
+
+[comment]: # (!!! data-background-video="https://gitlab.com/da_doomer/markdown-slides/-/raw/master/example/media/video.mp4", data-background-video-loop data-background-video-muted data-background-opacity="0.2")
