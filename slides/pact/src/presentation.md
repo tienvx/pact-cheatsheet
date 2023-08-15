@@ -11,61 +11,24 @@ Tien Vo | Developer | August 13, 2023
 
 ## What is Pact?
 
-[comment]: # (!!! data-auto-animate)
-
-## What is Pact?
-
-- Code-first
-
-[comment]: # (!!! data-auto-animate)
-
-## What is Pact?
-
-- Code-first
-- Consumer-driven
-
-[comment]: # (!!! data-auto-animate)
-
-## What is Pact?
-
-- Code-first
-- Consumer-driven
-- Contract
-
-[comment]: # (!!! data-auto-animate)
-
-## What is Pact?
-
-- Code-first
-- Consumer-driven
-- Contract
-- Testing tool
+- Code-first  <!-- .element: class="fragment" -->
+- Consumer-driven  <!-- .element: class="fragment" -->
+- Contract  <!-- .element: class="fragment" -->
+- Testing tool  <!-- .element: class="fragment" -->
 
 [comment]: # (!!! data-auto-animate)
 
 ## Code-first vs Design-first
 
-- Code-first: contract is generated from (contract test) code
-
-[comment]: # (!!! data-auto-animate)
-
-## Code-first vs Design-first
-
-- Code-first: contract is generated from (contract test) code
-- Design-first: contract is generated from api design
+- Code-first: contract is generated from (contract test) code  <!-- .element: class="fragment" -->
+- Design-first: contract is generated from api design  <!-- .element: class="fragment" -->
 
 [comment]: # (!!! data-auto-animate)
 
 ## Consumer-driven vs Provider-driven
 
-- Consumer-driven: consumer write contract, provider test implementation against it
-
-[comment]: # (!!! data-auto-animate)
-
-## Consumer-driven vs Provider-driven
-
-- Consumer-driven: consumer write contract, provider test implementation against it
-- Provider-driven: provider write contract, consumer test implementation against it
+- Consumer-driven: consumer write contract, provider test implementation against it  <!-- .element: class="fragment" -->
+- Provider-driven: provider write contract, consumer test implementation against it  <!-- .element: class="fragment" -->
 
 [comment]: # (!!! data-auto-animate)
 
@@ -87,40 +50,22 @@ Tien Vo | Developer | August 13, 2023
 
 ## Schema vs Contract
 
-- Schema: Abstract
+- Schema: Abstract  <!-- .element: class="fragment" -->
+- Contract: Concrete  <!-- .element: class="fragment" -->
 
 [comment]: # (!!! data-auto-animate)
 
 ## Schema vs Contract
 
-- Schema: Abstract
-- Contract: Concrete
+- Schema: All possible states of api  <!-- .element: class="fragment" -->
+- Contract: Single state of api  <!-- .element: class="fragment" -->
 
 [comment]: # (!!! data-auto-animate)
 
 ## Schema vs Contract
 
-- Schema: All possible states of api
-
-[comment]: # (!!! data-auto-animate)
-
-## Schema vs Contract
-
-- Schema: All possible states of api
-- Contract: Single state of api
-
-[comment]: # (!!! data-auto-animate)
-
-## Schema vs Contract
-
-- Schema: Define once, use multiple times
-
-[comment]: # (!!! data-auto-animate)
-
-## Schema vs Contract
-
-- Schema: Define once, use multiple times
-- Contract: Define once, use once
+- Schema: Define once, use multiple times  <!-- .element: class="fragment" -->
+- Contract: Define once, use once  <!-- .element: class="fragment" -->
 
 [comment]: # (!!! data-auto-animate)
 
@@ -171,27 +116,15 @@ GET /users/1
 
 ## Schema vs Contract
 
-- Schema: Allow optional field
+- Schema: Allow optional field  <!-- .element: class="fragment" -->
+- Contract: Don't allow optional field  <!-- .element: class="fragment" -->
 
 [comment]: # (!!! data-auto-animate)
 
 ## Schema vs Contract
 
-- Schema: Allow optional field
-- Contract: Don't allow optional field
-
-[comment]: # (!!! data-auto-animate)
-
-## Schema vs Contract
-
-- Schema: Allow empty array
-
-[comment]: # (!!! data-auto-animate)
-
-## Schema vs Contract
-
-- Schema: Allow empty array
-- Contract: Don't allow empty array
+- Schema: Allow empty array  <!-- .element: class="fragment" -->
+- Contract: Don't allow empty array  <!-- .element: class="fragment" -->
 
 [comment]: # (!!! data-auto-animate)
 
@@ -221,77 +154,14 @@ GET /users/1
 
 ## Why Pact?
 
-- Save development time
-
-[comment]: # (!!! data-auto-animate)
-
-## Why Pact?
-
-- Save development time
-- Save deployment time
-
-[comment]: # (!!! data-auto-animate)
-
-## Why Pact?
-
-- Save development time
-    - Provide fast feedback loop
-- Save deployment time
-
-[comment]: # (!!! data-auto-animate)
-
-## Why Pact?
-
-- Save development time
-    - Provide fast feedback loop
-    - Show exactly where is the problem
-- Save deployment time
-
-[comment]: # (!!! data-auto-animate)
-
-## Why Pact?
-
-- Save development time
-    - Provide fast feedback loop
-    - Show exactly where is the problem
-    - Debug problem locally
-- Save deployment time
-
-[comment]: # (!!! data-auto-animate)
-
-## Why Pact?
-
-- Save development time
-    - Provide fast feedback loop
-    - Show exactly where is the problem
-    - Debug problem locally
-    - Ensure only required API are developed
-- Save deployment time
-
-[comment]: # (!!! data-auto-animate)
-
-## Why Pact?
-
-- Save development time
-    - Provide fast feedback loop
-    - Show exactly where is the problem
-    - Debug problem locally
-    - Ensure only required API are developed
-    - Spend time focus on environmental related bug rather than integration bug
-- Save deployment time
-
-[comment]: # (!!! data-auto-animate)
-
-## Why Pact?
-
-- Save development time
-    - Provide fast feedback loop
-    - Show exactly where is the problem
-    - Debug problem locally
-    - Ensure only required API are developed
-    - Spend time focus on environmental related bug rather than integration bug
-- Save deployment time
-    - Replace and run faster than integration tests
+- Save development time  <!-- .element: class="fragment" -->
+    - Provide fast feedback loop  <!-- .element: class="fragment" -->
+    - Show exactly where is the problem  <!-- .element: class="fragment" -->
+    - Debug problem locally  <!-- .element: class="fragment" -->
+    - Ensure only required API are developed  <!-- .element: class="fragment" -->
+    - Spend time focus on environmental related bug rather than integration bug  <!-- .element: class="fragment" -->
+- Save deployment time  <!-- .element: class="fragment" -->
+    - Replace and run faster than integration tests  <!-- .element: class="fragment" -->
 
 [comment]: # (!!! data-auto-animate)
 
@@ -352,302 +222,151 @@ GET /users/1
 
 ## When Pact?
 
-* Team control both consumer and provider
+* Team control both consumer and provider  <!-- .element: class="fragment" -->
 
 [comment]: # (!!!)
 
 ## When Not Pact?
 
-- Team does not control either consumer or provider
-
-[comment]: # (!!! data-auto-animate)
-
-## When Not Pact?
-
-- Team does not control either consumer or provider
-- Public API
-
-[comment]: # (!!! data-auto-animate)
-
-## When Not Pact?
-
-- Team does not control either consumer or provider
-- Public API
-- Performance and load tests
-
-[comment]: # (!!! data-auto-animate)
-
-## When Not Pact?
-
-- Team does not control either consumer or provider
-- Public API
-- Performance and load tests
-- Functional testing of the provider
-
-[comment]: # (!!! data-auto-animate)
-
-## When Not Pact?
-
-- Team does not control either consumer or provider
-- Public API
-- Performance and load tests
-- Functional testing of the provider
-- Testing "pass through" APIs
-
-[comment]: # (!!! data-auto-animate)
-
-## When Not Pact?
-
-- Team does not control either consumer or provider
-- Public API
-- Performance and load tests
-- Functional testing of the provider
-- Testing "pass through" APIs
-- Pact is not a good mocking or stubbing tool for E2E tests
+- Team does not control either consumer or provider  <!-- .element: class="fragment" -->
+- Public API  <!-- .element: class="fragment" -->
+- Performance and load tests  <!-- .element: class="fragment" -->
+- Functional testing of the provider  <!-- .element: class="fragment" -->
+- Testing "pass through" APIs  <!-- .element: class="fragment" -->
+- Pact is not a good mocking or stubbing tool for E2E tests  <!-- .element: class="fragment" -->
 
 [comment]: # (!!! data-auto-animate)
 
 ## How Pact?
 
-- Terms
-- Diagrams
-- Best Practices
-- Demo
+- Terms  <!-- .element: class="fragment" -->
+- Diagrams  <!-- .element: class="fragment" -->
+- Best Practices  <!-- .element: class="fragment" -->
+- Demo  <!-- .element: class="fragment" -->
 
 [comment]: # (!!!)
 
 ## Terms
 
-- Pacticipant
+- Pacticipant  <!-- .element: class="strike fragment" -->
+- Consumer  <!-- .element: class="fragment" -->
+- Provider  <!-- .element: class="fragment" -->
+- Broker  <!-- .element: class="fragment" -->
 
 [comment]: # (!!! data-auto-animate)
 
 ## Terms
 
-- Pacticipant
-    - Consumer
+- Integration  <!-- .element: class="fragment" -->
+    - Pact  <!-- .element: class="fragment" -->
+        - Interaction  <!-- .element: class="fragment" -->
 
 [comment]: # (!!! data-auto-animate)
 
 ## Terms
 
-- Pacticipant
-    - Consumer
-    - Provider
+- Specification  <!-- .element: class="fragment" -->
+    - 1  <!-- .element: class="fragment" -->
+    - 1.1  <!-- .element: class="fragment" -->
+    - 2  <!-- .element: class="fragment" -->
+    - 3  <!-- .element: class="fragment" -->
+    - 4  <!-- .element: class="fragment" -->
 
 [comment]: # (!!! data-auto-animate)
 
 ## Terms
 
-- Pacticipant
-    - Consumer
-    - Provider
-- Broker
+- Matcher  <!-- .element: class="fragment" -->
+    - equality  <!-- .element: class="fragment" -->
+    - regex  <!-- .element: class="fragment" -->
+    - type  <!-- .element: class="fragment" -->
+    - include  <!-- .element: class="fragment" -->
+    - integer  <!-- .element: class="fragment" -->
+    - decimal  <!-- .element: class="fragment" -->
+    - number  <!-- .element: class="fragment" -->
+    - datetime  <!-- .element: class="fragment" -->
+    - ...  <!-- .element: class="fragment" -->
 
 [comment]: # (!!! data-auto-animate)
 
 ## Terms
 
-- Integration
+- Generator  <!-- .element: class="fragment" -->
+    - RandomInt  <!-- .element: class="fragment" -->
+    - RandomDecimal  <!-- .element: class="fragment" -->
+    - RandomHexadecimal  <!-- .element: class="fragment" -->
+    - RandomString  <!-- .element: class="fragment" -->
+    - Regex  <!-- .element: class="fragment" -->
+    - Uuid  <!-- .element: class="fragment" -->
+    - Date  <!-- .element: class="fragment" -->
+    - Time  <!-- .element: class="fragment" -->
+    - ...  <!-- .element: class="fragment" -->
 
 [comment]: # (!!! data-auto-animate)
 
 ## Terms
 
-- Integration
-    - Pact
+- Provider Verification  <!-- .element: class="fragment" -->
+- Consumer Version Selectors  <!-- .element: class="fragment" -->
+    - { "mainBranch": true }  <!-- .element: class="fragment highlight" -->
+    - { "branch": "\<branch\>" }  <!-- .element: class="fragment highlight" -->
+    - { "deployedOrReleased": true }  <!-- .element: class="fragment highlight" -->
+    - { "matchingBranch": true }  <!-- .element: class="fragment highlight" -->
+- Provider States  <!-- .element: class="fragment" -->
 
 [comment]: # (!!! data-auto-animate)
 
 ## Terms
 
-- Integration
-    - Pact
-        - Interaction
+- Tag  <!-- .element: class="strike fragment" -->
+- Version (git sha)   <!-- .element: class="fragment" -->
+- Branch  <!-- .element: class="fragment" -->
+- Environment  <!-- .element: class="fragment" -->
 
 [comment]: # (!!! data-auto-animate)
 
 ## Terms
 
-- Specification
+- Deployment  <!-- .element: class="fragment" -->
+    - Application Instance  <!-- .element: class="fragment" -->
+- Release  <!-- .element: class="fragment" -->
+- "Can I Deploy?" Tool  <!-- .element: class="fragment" -->
+- Webhook  <!-- .element: class="fragment" -->
 
 [comment]: # (!!! data-auto-animate)
 
 ## Terms
 
-- Specification
-- Matcher
+- Interaction Types  <!-- .element: class="fragment" -->
+    - Synchronous/HTTP -> REST (JSON/HTTP), SOAP (XML/HTTP), JSON-RPC, GraphQL  <!-- .element: class="fragment" -->
+    - Asynchronous/Messages -> RabbitMQ, Kafka, Fire and Forget, Server Push  <!-- .element: class="fragment" -->
+    - Synchronous/Messages -> gRPC/protobufs, Websockets, MQTT, Data Pipelines, AWS Lambda  <!-- .element: class="fragment" -->
 
 [comment]: # (!!! data-auto-animate)
 
 ## Terms
 
-- Specification
-- Matcher
-- Generator
+- Protocols  <!-- .element: class="fragment" -->
+    - HTTP  <!-- .element: class="fragment" -->
+    - Message  <!-- .element: class="fragment" -->
+    - Protobuf  <!-- .element: class="fragment" -->
+    - GraphQL  <!-- .element: class="fragment" -->
 
 [comment]: # (!!! data-auto-animate)
 
 ## Terms
 
-- Provider Verification
+- Transports  <!-- .element: class="fragment" -->
+    - gRPC  <!-- .element: class="fragment" -->
+    - Websockets  <!-- .element: class="fragment" -->
 
 [comment]: # (!!! data-auto-animate)
 
 ## Terms
 
-- Provider Verification
-- Consumer Version Selectors
-
-[comment]: # (!!! data-auto-animate)
-
-## Terms
-
-- Provider Verification
-- Consumer Version Selectors
-- Provider States
-
-[comment]: # (!!! data-auto-animate)
-
-## Terms
-
-- Version
-
-[comment]: # (!!! data-auto-animate)
-
-## Terms
-
-- Version
-    - Consumer Version
-
-[comment]: # (!!! data-auto-animate)
-
-## Terms
-
-- Version
-    - Consumer Version
-    - Provider Version
-
-[comment]: # (!!! data-auto-animate)
-
-## Terms
-
-- Version
-    - Consumer Version
-    - Provider Version
-- Branch
-
-[comment]: # (!!! data-auto-animate)
-
-## Terms
-
-- Version
-    - Consumer Version
-    - Provider Version
-- Branch
-- Environment
-
-[comment]: # (!!! data-auto-animate)
-
-## Terms
-
-- Version
-    - Consumer Version
-    - Provider Version
-- Branch
-- Environment
-- ~~Tag~~
-
-[comment]: # (!!! data-auto-animate)
-
-## Terms
-
-- Deployment
-
-[comment]: # (!!! data-auto-animate)
-
-## Terms
-
-- Deployment
-    - Application Instance
-
-[comment]: # (!!! data-auto-animate)
-
-## Terms
-
-- Deployment
-    - Application Instance
-- Release
-
-[comment]: # (!!! data-auto-animate)
-
-## Terms
-
-- Deployment
-    - Application Instance
-- Release
-- "Can I Deploy?" Tool
-
-[comment]: # (!!! data-auto-animate)
-
-## Terms
-
-- Deployment
-    - Application Instance
-- Release
-- "Can I Deploy?" Tool
-- Webhook
-
-[comment]: # (!!! data-auto-animate)
-
-## Terms
-
-- Protocols
-
-[comment]: # (!!! data-auto-animate)
-
-## Terms
-
-- Protocols
-    - HTTP
-
-[comment]: # (!!! data-auto-animate)
-
-## Terms
-
-- Protocols
-    - HTTP
-    - Message
-
-[comment]: # (!!! data-auto-animate)
-
-## Terms
-
-- Protocols
-    - HTTP
-    - Message
-    - Protobuf
-
-[comment]: # (!!! data-auto-animate)
-
-## Terms
-
-- Plugins
-
-[comment]: # (!!! data-auto-animate)
-
-## Terms
-
-- Plugins
-    - CSV
-
-[comment]: # (!!! data-auto-animate)
-
-## Terms
-
-- Plugins
-    - CSV
-    - Protobuf
+- Plugins  <!-- .element: class="fragment" -->
+    - CSV  <!-- .element: class="fragment" -->
+    - Protobuf  <!-- .element: class="fragment" -->
 
 [comment]: # (!!! data-auto-animate)
 
@@ -667,9 +386,10 @@ TBD
 - CI flow
 - Webhook
 
-[comment]: # (Link introduce pact: https://docs.pact.io/#consumer-driven-contracts)
-[comment]: # (Link compare schema to contract: https://pactflow.io/blog/schemas-are-not-contracts/)
-[comment]: # (Link introduce to design-first contract testing: https://medium.com/coderbyte/design-first-contract-testing-for-micro-services-baf929e29f6c)
-[comment]: # (Link explain why no support for optional attribute: https://docs.pact.io/faq#why-is-there-no-support-for-specifying-optional-attributes)
-[comment]: # (Link convince to use Pact: https://docs.pact.io/faq/convinceme)
-[comment]: # (Link list down situations when to use or not to use Pact: https://docs.pact.io/getting_started/what_is_pact_good_for)
+[comment]: # (Introduce to pact: https://docs.pact.io/#consumer-driven-contracts)
+[comment]: # (Compare schema to contract: https://pactflow.io/blog/schemas-are-not-contracts/)
+[comment]: # (Introduce to design-first contract testing: https://medium.com/coderbyte/design-first-contract-testing-for-micro-services-baf929e29f6c)
+[comment]: # (Explain why no support for optional attribute: https://docs.pact.io/faq#why-is-there-no-support-for-specifying-optional-attributes)
+[comment]: # (Convince to use Pact: https://docs.pact.io/faq/convinceme)
+[comment]: # (List of situations when to use or not to use Pact: https://docs.pact.io/getting_started/what_is_pact_good_for)
+[comment]: # (List of terms: https://docs.pact.io/getting_started/terminology)
