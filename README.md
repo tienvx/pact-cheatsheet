@@ -16,5 +16,5 @@ python3 -m pip install git+https://gitlab.com/da_doomer/markdown-slides.git
 Build:
 
 ```shell
-mdslides --include ./slides/pact/src/media --output_dir ./slides/pact/output ./slides/pact/src/presentation.md
+./slides/pact/build.sh
 ```
