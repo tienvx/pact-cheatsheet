@@ -1,0 +1,40 @@
+stateDiagram-v2
+    direction LR
+    classDef orange fill:orange
+    classDef green fill:green
+    class Contract orange
+    class ContractProvider green
+
+    CS: Coding Standards Checking
+    ContractProvider: Contract (Verification)
+    StubServer: Start Stub Server
+    Publish: Publish Pacts
+    MergeVersion: Create Or Update Version
+    Ask: Can I Deploy?
+    RecordDeployment: Record Deployment
+    RecordRelease: Record Release
+
+    [*] --> CS
+    CS --> Test
+    state Test {
+        Unit --> Contract
+        Contract --> ContractProvider
+        ContractProvider --> StubServer
+        StubServer --> Integration
+        Integration --> Application
+    }
+    Test --> Publish
+    Publish --> MergeVersion
+    MergeVersion --> Ask
+    Ask --> Build
+    Build --> Deploy
+    Deploy --> Record
+    state Record {
+        direction LR
+
+        state if_state <<choice>>
+        [*] --> if_state
+        if_state --> RecordDeployment: if deploy
+        if_state --> RecordRelease: if release
+    }
+    Record --> [*]

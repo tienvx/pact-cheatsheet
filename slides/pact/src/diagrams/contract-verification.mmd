@@ -1,0 +1,51 @@
+stateDiagram-v2
+    direction LR
+
+    Start: Start Web Server
+    Verify: Verify Pacts
+    Assert: Assert Verification
+    Fetch: Fetch Pacts From Pact Broker
+    LoopPacts: Foreach Pact
+    LastPact: Last Pact?
+    LoopInteractions: Foreach Interaction
+    LastInteraction: Last Interaction?
+    Setup: Setup Provider State
+    Send: Send Request
+    Collect: Collect Matches & Mismatches
+    Teardown: Teardown Provider State
+    Publish: Publish Verification Results
+
+    [*] --> Start
+    Start --> Verify
+
+    state Verify {
+        [*] --> Fetch
+        Fetch --> LoopPacts
+        state LoopPacts {
+            [*] --> LoopInteractions
+            state LoopInteractions {
+                direction LR
+
+                [*] --> Setup
+                Setup --> Send
+                Send --> Collect
+                Collect --> Teardown
+                Teardown --> [*]
+            }
+
+            state LastInteraction <<choice>>
+            LoopInteractions --> LastInteraction
+            LastInteraction --> LoopInteractions: if false
+            LastInteraction --> [*] : if true
+        }
+
+        state LastPact <<choice>>
+        LoopPacts --> LastPact
+        LastPact --> LoopPacts: if false
+        LastPact --> Publish : if true
+
+        Publish --> [*]
+    }
+
+    Verify --> Assert
+    Assert --> [*]

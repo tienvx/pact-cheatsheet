@@ -372,7 +372,68 @@ GET /users/1
 
 ## Diagrams
 
-TBD
+- CI - Backend
+- CI - Frontend
+- Contract Test
+- Contract Verification
+
+[comment]: # (!!!)
+
+## CI - Backend
+
+![ci-backend](media/ci-backend.svg)
+
+[comment]: # (!!!)
+
+## CI - Frontend
+
+![ci-frontend](media/ci-frontend.svg)
+
+[comment]: # (!!!)
+
+## Contract Test
+
+![contract-test](media/contract-test.svg)
+
+[comment]: # (!!!)
+
+## Contract Test
+
+```php [1-6|8-15|17-22|24-25|27]
+$request = new ConsumerRequest();
+$request
+    ->setMethod('GET')
+    ->setPath('/api/users/1')
+    ->addHeader('Accept', '*/*')
+;
+
+$response = new ProviderResponse();
+$response
+    ->setStatus(200)
+    ->setBody([
+        'name' => $matcher->like('Tom'),
+    ])
+    ->setContentType('text/csv')
+;
+
+$builder
+    ->given('User 1 in database')
+    ->uponReceiving('Request getting user 1')
+    ->with($request)
+    ->willRespondWith($response)
+;
+
+$client = new Client($config->getBaseUri());
+$client->getUser(1);
+
+$this->assertTrue($this->builder->verify());
+```
+
+[comment]: # (!!! data-auto-animate)
+
+## Contract Verification
+
+![contract-verification](media/contract-verification.svg)
 
 [comment]: # (!!!)
 
