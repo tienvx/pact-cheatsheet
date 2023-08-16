@@ -2,11 +2,13 @@
 
 A collection of slides.
 
-## Usage
+## Run
 
 ```shell
 docker run --rm --name=tienvx-slides -p '8000:80' tienvx/slides
 ```
+
+Go to http://localhost:8000/NAME
 
 ## Build
 
@@ -25,12 +27,14 @@ python3 -m pip install git+https://gitlab.com/da_doomer/markdown-slides.git
 
 ### Pact
 
-* [Source](./slides/pact/src/presentation.md)
-* [Media](./slides/pact/src/media)
-* [Presentation](./output/pact/index.html)
-
-Build:
+#### Build
 
 ```shell
 ./slides/pact/build.sh
 ```
+
+#### Links
+
+* [Source](./slides/pact/src/presentation.md)
+* [Media](./slides/pact/src/media)
+* [Presentation](./output/pact/index.html)
