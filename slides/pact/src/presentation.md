@@ -3,16 +3,7 @@
 [comment]: # (THEME = white)
 [comment]: # (CODE_THEME = base16/zenburn)
 
-[comment]: # (Introduce to pact: https://docs.pact.io/#consumer-driven-contracts)
-[comment]: # (Compare schema to contract: https://pactflow.io/blog/schemas-are-not-contracts/)
-[comment]: # (Introduce to design-first contract testing: https://medium.com/coderbyte/design-first-contract-testing-for-micro-services-baf929e29f6c)
-[comment]: # (Explain why no support for optional attribute: https://docs.pact.io/faq#why-is-there-no-support-for-specifying-optional-attributes)
-[comment]: # (Convince to use Pact: https://docs.pact.io/faq/convinceme)
-[comment]: # (List of situations when to use or not to use Pact: https://docs.pact.io/getting_started/what_is_pact_good_for)
-[comment]: # (List of terms: https://docs.pact.io/getting_started/terminology)
-[comment]: # (CI practices: https://docs.pact.io/pact_nirvana)
-[comment]: # (How to write good consumer tests: https://docs.pact.io/consumer)
-[comment]: # (5 reasons failed to apply contract testing: https://pactflow.io/blog/five-reasons-why-your-contract-testing-initiative-could-fail-and-how-to-avoid-them/)
+[comment]: # (controls: true)
 
 Tien Vo | Developer | August 19, 2023
 
@@ -616,3 +607,23 @@ Use read-only token
 ## Demo
 
 [comment]: # (!!! data-background-video="https://gitlab.com/da_doomer/markdown-slides/-/raw/master/example/media/video.mp4", data-background-video-loop data-background-video-muted data-background-opacity="0.2")
+
+[comment]: # (!!!)
+
+## References
+
+- [Introduce to pact](https://docs.pact.io/#consumer-driven-contracts)
+- [Compare schema to contract](https://pactflow.io/blog/schemas-are-not-contracts/)
+- [Introduce to design-first contract testing](https://medium.com/coderbyte/design-first-contract-testing-for-micro-services-baf929e29f6c)
+- [Explain why no support for optional attribute](https://docs.pact.io/faq#why-is-there-no-support-for-specifying-optional-attributes)
+- [Convince to use Pact](https://docs.pact.io/faq/convinceme)
+- [List of situations when to use or not to use Pact](https://docs.pact.io/getting_started/what_is_pact_good_for)
+
+[comment]: # (!!!)
+
+## References
+
+- [List of terms](https://docs.pact.io/getting_started/terminology)
+- [CI practices](https://docs.pact.io/pact_nirvana)
+- [How to write good consumer tests](https://docs.pact.io/consumer)
+- [5 reasons failed to apply contract testing](https://pactflow.io/blog/five-reasons-why-your-contract-testing-initiative-could-fail-and-how-to-avoid-them/)
