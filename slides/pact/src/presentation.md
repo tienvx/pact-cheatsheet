@@ -79,6 +79,18 @@ Pact 🎉
 
 [comment]: # (!!!)
 
+## Schema
+
+![schema](./media/schema.png)
+
+[comment]: # (!!!)
+
+## Contract
+
+![schema](./media/contract.png)
+
+[comment]: # (!!!)
+
 ## Schema vs Contract
 
 - Schema: Abstract  <!-- .element: class="fragment" -->
