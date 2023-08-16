@@ -2,16 +2,17 @@
 
 A collection of slides.
 
+## Usage
+
+```shell
+docker run --rm --name=tienvx-slides -p '8000:80' tienvx/slides
+```
+
 ## Build
 
 ```shell
-DOCKER_BUILDKIT=1 docker build -t slides .
-```
-
-## Run
-
-```shell
-docker run -p '8000:80' slides
+DOCKER_BUILDKIT=1 docker build -t my/slides .
+docker run --rm --name my-slides -p '8000:80' my/slides
 ```
 
 ## Develop
@@ -25,6 +26,7 @@ python3 -m pip install git+https://gitlab.com/da_doomer/markdown-slides.git
 ### Pact
 
 * [Source](./slides/pact/src/presentation.md)
+* [Media](./slides/pact/src/media)
 * [Presentation](./output/pact/index.html)
 
 Build:
