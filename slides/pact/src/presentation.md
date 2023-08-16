@@ -567,13 +567,45 @@ $this->assertTrue($verifier->verify());
 
 ## Best Practices
 
-- How to write consumer test?
-- Consumer version selectors
+- How to write pact consumer test?
+- Recommended consumer version selectors
 - No optional attributes
 - Versioning
-- Local development (read-only token)
-- CI flow
-- Webhook
+- Local development
+
+[comment]: # (!!!)
+
+## How to write pact consumer test?
+
+![scope](https://s3-ap-southeast-2.amazonaws.com/content-prod-529546285894/2023/07/scope.JPG)
+
+[comment]: # (Image source: https://pactflow.io/blog/five-reasons-why-your-contract-testing-initiative-could-fail-and-how-to-avoid-them/)
+
+[comment]: # (!!!)
+
+## Recommended consumer version selectors
+
+- {"mainBranch": true}  <!-- .element: class="fragment" -->
+- {"deployedOrReleased": true}  <!-- .element: class="fragment" -->
+
+[comment]: # (!!!)
+
+## No optional attributes
+
+- No optional field  <!-- .element: class="fragment" -->
+- No empty array  <!-- .element: class="fragment" -->
+
+[comment]: # (!!!)
+
+## Versioning
+
+Use git commit hash (sha)
+
+[comment]: # (!!!)
+
+## Local development
+
+Use read-only token
 
 [comment]: # (!!!)
 
