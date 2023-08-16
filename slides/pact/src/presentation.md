@@ -220,16 +220,14 @@ GET /users/1
 
 ## Testing Techniques Scope
 
-| Technique    | Backend CI/CD | Frontend CI/CD | Test Environment |
-| ------       | ------        | ------         | ------           |
-| unit         | x             | x              |                  |
-| contract     | x             | x              |                  |
-| integration  | x             |                |                  |
-| application  | x             |                |                  |
-| component    |               | x              |                  |
-| e2e          |               | x              |                  |
-| e2e api      |               |                | x                |
-| e2e ui       |               |                | x                |
+| Technique             | Service CI/CD | Test Environment |
+| ------                | ------        | ------           |
+| unit                  | x             |                  |
+| contract              | x             |                  |
+| integration/component | x             |                  |
+| application/e2e       | x             |                  |
+| e2e api               |               | x                |
+| e2e ui                |               | x                |
 
 [comment]: # (!!!)
 
