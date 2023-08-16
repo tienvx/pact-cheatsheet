@@ -10,8 +10,9 @@
 [comment]: # (Convince to use Pact: https://docs.pact.io/faq/convinceme)
 [comment]: # (List of situations when to use or not to use Pact: https://docs.pact.io/getting_started/what_is_pact_good_for)
 [comment]: # (List of terms: https://docs.pact.io/getting_started/terminology)
+[comment]: # (CI practices: https://docs.pact.io/pact_nirvana)
 
-Tien Vo | Developer | August 13, 2023
+Tien Vo | Developer | August 19, 2023
 
 # Pact
 
@@ -243,6 +244,18 @@ GET /users/1
 - Functional testing of the provider  <!-- .element: class="fragment" -->
 - Testing "pass through" APIs  <!-- .element: class="fragment" -->
 - Pact is not a good mocking or stubbing tool for E2E tests  <!-- .element: class="fragment" -->
+
+[comment]: # (!!! data-auto-animate)
+
+## Where Pact?
+
+- Contract tests suite  <!-- .element: class="fragment" -->
+    - Contract tests (consumer)  <!-- .element: class="fragment" -->
+    - Contracts verification (provider)  <!-- .element: class="fragment" -->
+- CI workflow  <!-- .element: class="fragment" -->
+    - 'Can I deploy?' step  <!-- .element: class="fragment" -->
+    - 'Record deployment/release' step  <!-- .element: class="fragment" -->
+    - The 'contract requiring verification published' event's webhook  <!-- .element: class="fragment" -->
 
 [comment]: # (!!! data-auto-animate)
 
