@@ -18,6 +18,35 @@ Tien Vo | Developer | August 19, 2023
 
 [comment]: # (!!!)
 
+## Questions
+
+- Are there a better way to test a (micro)service that depend on other (micro)service?  <!-- .element: class="fragment" -->
+    - Using service mock?  <!-- .element: class="fragment" -->
+    - Call service directly in test?  <!-- .element: class="fragment" -->
+- My service depend on other service. Now it's not working correctly.  <!-- .element: class="fragment" -->
+    - Does it related to the other service?  <!-- .element: class="fragment" -->
+    - What did it changed?  <!-- .element: class="fragment" -->
+    - When did it happen?  <!-- .element: class="fragment" -->
+    - Why didn't I know about this?  <!-- .element: class="fragment" -->
+
+[comment]: # (!!! data-auto-animate)
+
+## Questions
+
+- Can I refactor this code?  <!-- .element: class="fragment" -->
+    - Can I remove this field?  <!-- .element: class="fragment" -->
+    - Can I rename this field?  <!-- .element: class="fragment" -->
+- Can I deploy this service to staging/production?  <!-- .element: class="fragment" -->
+    - Which services I need to deploy first before mine?  <!-- .element: class="fragment" -->
+
+[comment]: # (!!! data-auto-animate)
+
+## The answer I am looking for:
+
+Pact 🎉
+
+[comment]: # (!!!)
+
 ## What is Pact?
 
 - Code-first  <!-- .element: class="fragment" -->
