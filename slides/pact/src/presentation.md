@@ -609,6 +609,8 @@ Use git commit hash (sha)
 
 Use read-only token
 
+![read-only-token](media/read-only-token.png)
+
 [comment]: # (!!!)
 
 ## Demo
