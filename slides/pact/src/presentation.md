@@ -11,6 +11,8 @@
 [comment]: # (List of situations when to use or not to use Pact: https://docs.pact.io/getting_started/what_is_pact_good_for)
 [comment]: # (List of terms: https://docs.pact.io/getting_started/terminology)
 [comment]: # (CI practices: https://docs.pact.io/pact_nirvana)
+[comment]: # (How to write good consumer tests: https://docs.pact.io/consumer)
+[comment]: # (5 reasons failed to apply contract testing: https://pactflow.io/blog/five-reasons-why-your-contract-testing-initiative-could-fail-and-how-to-avoid-them/)
 
 Tien Vo | Developer | August 19, 2023
 
