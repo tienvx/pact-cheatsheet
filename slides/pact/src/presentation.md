@@ -606,8 +606,6 @@ Use read-only token
 
 [comment]: # (!!! data-background-video="https://gitlab.com/da_doomer/markdown-slides/-/raw/master/example/media/video.mp4", data-background-video-loop data-background-video-muted data-background-opacity="0.2")
 
-[comment]: # (!!!)
-
 ## References
 
 - [Introduce to pact](https://docs.pact.io/#consumer-driven-contracts)
