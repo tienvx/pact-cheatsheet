@@ -8,7 +8,10 @@ A collection of slides.
 docker run --rm --name=tienvx-slides -p '8000:80' tienvx/slides
 ```
 
-Go to http://localhost:8000/NAME
+Go to http://localhost:8000/[NAME]
+
+[NAME] can be:
+- pact
 
 ## Build
 
