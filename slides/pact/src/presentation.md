@@ -623,6 +623,12 @@ Use read-only token
 - [Introduce to pact](https://docs.pact.io/#consumer-driven-contracts)
 - [Compare schema to contract](https://pactflow.io/blog/schemas-are-not-contracts/)
 - [Introduce to design-first contract testing](https://medium.com/coderbyte/design-first-contract-testing-for-micro-services-baf929e29f6c)
+- [Compare consumer-driven and provider-driven contract testing](https://pactflow.io/blog/the-curious-case-for-the-provider-driven-contract/)
+
+[comment]: # (!!!)
+
+## References
+
 - [Explain why no support for optional attribute](https://docs.pact.io/faq#why-is-there-no-support-for-specifying-optional-attributes)
 - [Convince to use Pact](https://docs.pact.io/faq/convinceme)
 - [List of situations when to use or not to use Pact](https://docs.pact.io/getting_started/what_is_pact_good_for)
