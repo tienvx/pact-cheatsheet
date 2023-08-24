@@ -647,6 +647,8 @@ Use read-only token
 - [How to write good consumer tests](https://docs.pact.io/consumer)
 - [5 reasons failed to apply contract testing](https://pactflow.io/blog/five-reasons-why-your-contract-testing-initiative-could-fail-and-how-to-avoid-them/)
 
+[comment]: # (!!!)
+
 ## References
 
 - [Pending Pacts](https://docs.pact.io/pact_broker/advanced_topics/pending_pacts)
