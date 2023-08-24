@@ -653,3 +653,9 @@ Use read-only token
 
 - [Pending Pacts](https://docs.pact.io/pact_broker/advanced_topics/pending_pacts)
 - [WIP Pacts](https://docs.pact.io/pact_broker/advanced_topics/wip_pacts)
+
+[comment]: # (!!!)
+
+## References
+
+- [Consumer Version Selectors](https://docs.pact.io/pact_broker/advanced_topics/consumer_version_selectors)
