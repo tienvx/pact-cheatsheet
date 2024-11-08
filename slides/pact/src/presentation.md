@@ -421,6 +421,8 @@ GET /users/1
     - CSV
     - Protobuf
 
+[comment]: # (!!! data-auto-animate)
+
 ## Terms
 
 - Pending Pacts
