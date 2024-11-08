@@ -65,9 +65,7 @@ Pact 🎉
 
 ## Code-first + Consumer-driven
 
-![code-first consumer-driven](https://miro.medium.com/v2/resize:fit:720/format:webp/1*aSzw1aA8Ef8ruCbcNjA2Lg.png)
-
-[comment]: # (Image source: https://medium.com/coderbyte/design-first-contract-testing-for-micro-services-baf929e29f6c)
+![code-first consumer-driven](./media/code-first-consumer-driven.png)
 
 [comment]: # (!!!)
 
