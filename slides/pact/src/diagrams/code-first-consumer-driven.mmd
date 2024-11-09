@@ -1,0 +1,10 @@
+flowchart LR
+    consumer[Consumer]
+    consumer-->|Publish contract|broker
+
+    subgraph broker[Pact Broker]
+        contracts[Contracts]
+    end
+
+    provider[Provider]
+    broker-->|Pull contracts and verify|provider

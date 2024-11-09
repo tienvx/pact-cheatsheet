@@ -1,0 +1,13 @@
+flowchart BT
+    consumer[Consumer]
+    consumer-->|Publish consumer contract|pactflow
+
+    provider[Provider]
+    provider-->|Publish provider contract|pactflow
+
+    subgraph pactflow[Pactflow]
+        direction LR
+        consumer_contract[Consumer Contract]
+        provider_contract[Provider Contract]
+        consumer_contract<-->|Compare|provider_contract
+    end

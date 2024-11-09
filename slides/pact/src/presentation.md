@@ -49,31 +49,15 @@ Pact 🎉
 
 [comment]: # (!!! data-auto-animate)
 
-## Code-first vs Design-first
+## Code-first + Consumer-driven Contract Testing
 
-- Code-first: contract is generated from (contract test) code  <!-- .element: class="fragment" -->
-- Design-first: contract is generated from api design  <!-- .element: class="fragment" -->
-
-[comment]: # (!!! data-auto-animate)
-
-## Consumer-driven vs Provider-driven
-
-- Consumer-driven: consumer write contract, provider test implementation against it  <!-- .element: class="fragment" -->
-- Provider-driven: provider write contract, consumer test implementation against it  <!-- .element: class="fragment" -->
-
-[comment]: # (!!! data-auto-animate)
-
-## Code-first + Consumer-driven
-
-![code-first consumer-driven](./media/code-first-consumer-driven.png)
+![code-first consumer-driven](./media/code-first-consumer-driven.svg)
 
 [comment]: # (!!!)
 
-## Design-first
+## Bi-Directional Contract Testing
 
-![design-first](https://miro.medium.com/v2/resize:fit:720/format:webp/1*LV9FwYBT8WSDAD0O9yG1QQ.png)
-
-[comment]: # (Image source: https://medium.com/coderbyte/design-first-contract-testing-for-micro-services-baf929e29f6c)
+![bi-directional](./media/bi-directional.svg)
 
 [comment]: # (!!!)
 
@@ -626,9 +610,8 @@ Use read-only token
 ## References
 
 - [Introduce to pact](https://docs.pact.io/#consumer-driven-contracts)
+- [Bi-Directional Contract Testing](https://docs.pactflow.io/docs/bi-directional-contract-testing)
 - [Compare schema to contract](https://pactflow.io/blog/schemas-are-not-contracts/)
-- [Introduce to design-first contract testing](https://medium.com/coderbyte/design-first-contract-testing-for-micro-services-baf929e29f6c)
-- [Compare consumer-driven and provider-driven contract testing](https://pactflow.io/blog/the-curious-case-for-the-provider-driven-contract/)
 
 [comment]: # (!!!)
 
