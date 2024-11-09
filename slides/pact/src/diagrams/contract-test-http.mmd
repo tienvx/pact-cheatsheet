@@ -1,5 +1,5 @@
 sequenceDiagram
-    rect rgb(200, 150, 255)
+    rect rgb(0, 150, 0)
     note right of Test: Register interaction
     Test->>Builder: Given: Provider states
     Test->>Builder: Upon receiving: description
@@ -19,12 +19,14 @@ sequenceDiagram
     Test->>Test: Assert Result
     Test->>Builder: Verify
     Builder->>Mock Server: Verify
+    rect rgb(0, 150, 0)
     alt is matched
         Mock Server-->>Mock Server: Write pact file
         Mock Server-->>Builder: Success
     else is not matched
         Mock Server-->>Builder: Missmatches (json)
         Mock Server-->>Builder: Failure
+    end
     end
     Mock Server-->>Mock Server: Clean up
     deactivate Mock Server

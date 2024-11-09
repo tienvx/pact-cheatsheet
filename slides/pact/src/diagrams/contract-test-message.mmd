@@ -1,5 +1,5 @@
 sequenceDiagram
-    rect rgb(200, 150, 255)
+    rect rgb(0, 150, 0)
     note right of Test: Register message
     Test->>Builder: Given: Provider states
     Test->>Builder: Expects to receive: description
@@ -12,11 +12,13 @@ sequenceDiagram
     Builder-->>Callback: Message
     Callback-->>Message Handler: Message
     Message Handler->>Message Handler: Handle message
+    rect rgb(0, 150, 0)
     alt has exception
         Builder-->>Test: Success
     else no exception
         Builder-->>Builder: Write pact file
         Builder-->>Builder: Clean up
         Builder-->>Test: Failure
+    end
     end
     Test-->>Test: Assert Verifying Result
