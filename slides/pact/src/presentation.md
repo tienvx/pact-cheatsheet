@@ -397,7 +397,8 @@ GET /users/1
 
 - CI - Backend
 - CI - Frontend
-- Contract Test
+- Contract Test HTTP
+- Contract Test Message
 - Contract Verification
 
 [comment]: # (|||)
@@ -414,13 +415,13 @@ GET /users/1
 
 [comment]: # (|||)
 
-## Contract Test
+## Contract Test HTTP
 
-![contract-test](media/contract-test.svg)
+![contract-test-http](media/contract-test-http.svg) <!-- .element: style="height:45vh" -->
 
 [comment]: # (|||)
 
-## Contract Test - Backend
+## Contract Test HTTP - Backend
 
 ```php [1-6|8-15|17-22|24-25|27]
 $request = new ConsumerRequest();
@@ -452,9 +453,9 @@ $client->getUser(1);
 $this->assertTrue($this->builder->verify());
 ```
 
-[comment]: # (||| data-auto-animate)
+[comment]: # (|||)
 
-## Contract Test - Frontend
+## Contract Test HTTP - Frontend
 
 ```ts [1|2-21|23-31]
 const pact = newPact('consumer', 'provider');
@@ -490,7 +491,37 @@ await pact.executeTest(async (mockserver: V3MockServer) => {
 });
 ```
 
-[comment]: # (||| data-auto-animate)
+[comment]: # (|||)
+
+## Contract Test Message
+
+![contract-test-message](media/contract-test-message.svg) <!-- .element: style="height:45vh" -->
+
+[comment]: # (|||)
+
+## Contract Test Message - Backend
+
+```php [1-7|9-14|16]
+$builder
+    ->given('A user')
+    ->expectsToReceive('User updated message')
+    ->withMetadata(['transport' => 'email'])
+    ->withContent([
+        'id' => $this->matcher->uuid($id),
+    ]);
+
+$builder->setCallback(function (string $pactJson): void {
+    $message = \json_decode($pactJson);
+    $handler = new UserUpdateddHandler($mailer);
+    $content = $message->contents->content;
+    $handler(new UserUpdated($content->id));
+});
+
+$this->assertTrue($builder->verify());
+```
+
+[comment]: # (|||)
+
 
 ## Contract Verification
 
@@ -535,7 +566,7 @@ $verifier->addBroker($broker);
 $this->assertTrue($verifier->verify());
 ```
 
-[comment]: # (!!! data-auto-animate)
+[comment]: # (!!!)
 
 ## Best Practices
 

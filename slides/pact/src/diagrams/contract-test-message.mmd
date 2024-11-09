@@ -1,0 +1,22 @@
+sequenceDiagram
+    rect rgb(200, 150, 255)
+    note right of Test: Register message
+    Test->>Builder: Given: Provider states
+    Test->>Builder: Expects to receive: description
+    Test->>Builder: With: metadata
+    Test->>Builder: With: contents
+    end
+    Test->>Builder: Set callback
+    Test->>Builder: Verify
+    Builder->>Builder: Reify
+    Builder-->>Callback: Message
+    Callback-->>Message Handler: Message
+    Message Handler->>Message Handler: Handle message
+    alt has exception
+        Builder-->>Test: Success
+    else no exception
+        Builder-->>Builder: Write pact file
+        Builder-->>Builder: Clean up
+        Builder-->>Test: Failure
+    end
+    Test-->>Test: Assert Verifying Result

@@ -1,0 +1,32 @@
+sequenceDiagram
+    rect rgb(200, 150, 255)
+    note right of Test: Register interaction
+    Test->>Builder: Given: Provider states
+    Test->>Builder: Upon receiving: description
+    Test->>Builder: With: request
+    Test->>Builder: Will response with: response
+    end
+    Test->>Builder: Register more interactions
+    Builder->>Mock Server: Start
+    activate Mock Server
+    Mock Server-->>Test: Mock Server Url
+    Test->>Client: Initiate Client
+    activate Client
+    Client->>Mock Server: Send Requests
+    Mock Server-->>Client: Responses
+    Client-->>Test: Result
+    deactivate Client
+    Test->>Test: Assert Result
+    Test->>Builder: Verify
+    Builder->>Mock Server: Verify
+    alt is matched
+        Mock Server-->>Mock Server: Write pact file
+        Mock Server-->>Builder: Success
+    else is not matched
+        Mock Server-->>Builder: Missmatches (json)
+        Mock Server-->>Builder: Failure
+    end
+    Mock Server-->>Mock Server: Clean up
+    deactivate Mock Server
+    Builder-->>Test: Verifying Result
+    Test-->>Test: Assert Verifying Result
