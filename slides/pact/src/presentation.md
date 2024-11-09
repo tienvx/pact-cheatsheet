@@ -5,7 +5,7 @@
 
 [comment]: # (controls: true)
 
-Tien Vo | Developer | August 19, 2023
+Tien Vo | Developer | November 9, 2024
 
 # Pact
 
@@ -61,38 +61,38 @@ Pact 🎉
 
 [comment]: # (!!!)
 
-## Schema
-
-![schema](./media/schema.png)
-
-[comment]: # (!!!)
-
 ## Contract
 
 ![schema](./media/contract.png)
 
-[comment]: # (!!!)
+[comment]: # (|||)
+
+## Schema
+
+![schema](./media/schema.png)
+
+[comment]: # (|||)
 
 ## Schema vs Contract
 
 - Schema: Abstract  <!-- .element: class="fragment" -->
 - Contract: Concrete  <!-- .element: class="fragment" -->
 
-[comment]: # (!!! data-auto-animate)
+[comment]: # (||| data-auto-animate)
 
 ## Schema vs Contract
 
 - Schema: All possible states of api  <!-- .element: class="fragment" -->
 - Contract: Single state of api  <!-- .element: class="fragment" -->
 
-[comment]: # (!!! data-auto-animate)
+[comment]: # (||| data-auto-animate)
 
 ## Schema vs Contract
 
 - Schema: Define once, use multiple times  <!-- .element: class="fragment" -->
 - Contract: Define once, use once  <!-- .element: class="fragment" -->
 
-[comment]: # (!!! data-auto-animate)
+[comment]: # (||| data-auto-animate)
 
 ## Schema vs Contract
 
@@ -109,7 +109,7 @@ GET /users/1
 }
 ```
 
-[comment]: # (!!!)
+[comment]: # (|||)
 
 ## Schema vs Contract
 
@@ -123,7 +123,7 @@ GET /users/1
 | age    | /edit-user | /show-user | birth-day-email |
 | email  | /edit-user | /show-user | birth-day-email |
 
-[comment]: # (!!!)
+[comment]: # (|||)
 
 ## Schema vs Contract
 
@@ -137,21 +137,21 @@ GET /users/1
 | age    | /edit-user | /show-user | birth-day-email |
 | email  | /edit-user | /show-user | birth-day-email |
 
-[comment]: # (!!!)
+[comment]: # (|||)
 
 ## Schema vs Contract
 
 - Schema: Allow optional field  <!-- .element: class="fragment" -->
 - Contract: Don't allow optional field  <!-- .element: class="fragment" -->
 
-[comment]: # (!!! data-auto-animate)
+[comment]: # (||| data-auto-animate)
 
 ## Schema vs Contract
 
 - Schema: Allow empty array  <!-- .element: class="fragment" -->
 - Contract: Don't allow empty array  <!-- .element: class="fragment" -->
 
-[comment]: # (!!! data-auto-animate)
+[comment]: # (||| data-auto-animate)
 
 ## Optional Field
 
@@ -163,7 +163,7 @@ GET /users/1
 }
 ```
 
-[comment]: # (!!!)
+[comment]: # (|||)
 
 ## Empty Array
 
@@ -190,65 +190,11 @@ GET /users/1
 
 [comment]: # (!!! data-auto-animate)
 
-## Pyramid without Contract
-
-![pyramid-without-contract](https://s3-ap-southeast-2.amazonaws.com/content-prod-529546285894/2022/09/Unbalanced-Test-Pyramid---Without-Contract-Testing.png)
-
-[comment]: # (Image source: https://pactflow.io/blog/contract-testing-vs-integration-testing/)
-
-[comment]: # (!!!)
-
-## Pyramid with Contract
-
-![pyramid-with-contract](https://s3-ap-southeast-2.amazonaws.com/content-prod-529546285894/2022/09/Rebalanced-Pyramid---With-Contract-Testing-compact.png)
-
-[comment]: # (Image source: https://pactflow.io/blog/contract-testing-vs-integration-testing/)
-
-[comment]: # (!!!)
-
-## Unit vs Contract vs Integration vs E2E
-
-[Comparation](https://pactflow.io/blog/contract-testing-vs-integration-testing/) of different testing techniques
-
-[comment]: # (!!!)
-
-## Testing Techniques Scope
-
-| Technique             | Service CI/CD | Test Environment |
-| ------                | ------        | ------           |
-| unit                  | x             |                  |
-| contract              | x             |                  |
-| integration/component | x             |                  |
-| application/e2e       | x             |                  |
-| e2e api               |               | x                |
-| e2e ui                |               | x                |
-
-[comment]: # (!!!)
-
-## Contract vs E2E
-
-| Attribute    | Contract          | E2E              |
-| ------       | ------            | ------           |
-| when         | before deployment | after deployment |
-| speed        | fast              | slow             |
-| coordination | easy              | hard             |
-| complexity   | linear            | non-linear       |
-
-[comment]: # (!!!)
-
-## Contract vs E2E Complexity
-
-![contract-vs-e2e-complexity](media/contract-vs-e2e-complexity.svg)
-
-[comment]: # (Image source: https://docs.pact.io/faq/convinceme)
-
-[comment]: # (!!!)
-
 ## When Pact?
 
 * Team control both consumer and provider  <!-- .element: class="fragment" -->
 
-[comment]: # (!!!)
+[comment]: # (|||)
 
 ## When Not Pact?
 
@@ -263,22 +209,56 @@ GET /users/1
 
 ## Where Pact?
 
-- Contract tests suite  <!-- .element: class="fragment" -->
-    - Contract tests (consumer)  <!-- .element: class="fragment" -->
-    - Contracts verification (provider)  <!-- .element: class="fragment" -->
-- CI workflow  <!-- .element: class="fragment" -->
-    - 'Can I deploy?' step  <!-- .element: class="fragment" -->
-    - 'Record deployment/release' step  <!-- .element: class="fragment" -->
-    - The 'contract requiring verification published' event's webhook  <!-- .element: class="fragment" -->
+![pyramid-with-contract](https://s3-ap-southeast-2.amazonaws.com/content-prod-529546285894/2022/09/Rebalanced-Pyramid---With-Contract-Testing-compact.png)
 
-[comment]: # (!!! data-auto-animate)
+[comment]: # (Image source: https://pactflow.io/blog/contract-testing-vs-integration-testing/)
+
+[comment]: # (|||)
+
+## Unit vs Contract vs Integration vs E2E
+
+[Comparation](https://pactflow.io/blog/contract-testing-vs-integration-testing/) of different testing techniques
+
+[comment]: # (|||)
+
+## Testing Techniques Scope
+
+| Technique             | Service CI/CD | Test Environment |
+| ------                | ------        | ------           |
+| unit                  | x             |                  |
+| contract              | x             |                  |
+| integration/component | x             |                  |
+| application/e2e       | x             |                  |
+| e2e api               |               | x                |
+| e2e ui                |               | x                |
+
+[comment]: # (|||)
+
+## Contract vs E2E
+
+| Attribute    | Contract          | E2E              |
+| ------       | ------            | ------           |
+| when         | before deployment | after deployment |
+| speed        | fast              | slow             |
+| coordination | easy              | hard             |
+| complexity   | linear            | non-linear       |
+
+[comment]: # (|||)
+
+## Contract vs E2E Complexity
+
+![contract-vs-e2e-complexity](media/contract-vs-e2e-complexity.svg)
+
+[comment]: # (Image source: https://docs.pact.io/faq/convinceme)
+
+[comment]: # (!!!)
 
 ## How Pact?
 
-- Terms  <!-- .element: class="fragment" -->
-- Diagrams  <!-- .element: class="fragment" -->
-- Best Practices  <!-- .element: class="fragment" -->
-- Demo  <!-- .element: class="fragment" -->
+- Terms
+- Diagrams
+- Best Practices
+- Demo
 
 [comment]: # (!!!)
 
@@ -289,7 +269,7 @@ GET /users/1
     - Provider
 - Broker
 
-[comment]: # (!!! data-auto-animate)
+[comment]: # (||| data-auto-animate)
 
 ## Terms
 
@@ -297,7 +277,7 @@ GET /users/1
     - Pact
         - Interaction
 
-[comment]: # (!!! data-auto-animate)
+[comment]: # (||| data-auto-animate)
 
 ## Terms
 
@@ -308,7 +288,7 @@ GET /users/1
     - 3
     - 4
 
-[comment]: # (!!! data-auto-animate)
+[comment]: # (||| data-auto-animate)
 
 ## Terms
 
@@ -323,7 +303,7 @@ GET /users/1
     - datetime
     - ...
 
-[comment]: # (!!! data-auto-animate)
+[comment]: # (||| data-auto-animate)
 
 ## Terms
 
@@ -338,7 +318,7 @@ GET /users/1
     - Time
     - ...
 
-[comment]: # (!!! data-auto-animate)
+[comment]: # (||| data-auto-animate)
 
 ## Terms
 
@@ -350,7 +330,7 @@ GET /users/1
     - { "matchingBranch": true }
 - Provider States
 
-[comment]: # (!!! data-auto-animate)
+[comment]: # (||| data-auto-animate)
 
 ## Terms
 
@@ -359,7 +339,7 @@ GET /users/1
 - Branch
 - Environment
 
-[comment]: # (!!! data-auto-animate)
+[comment]: # (||| data-auto-animate)
 
 ## Terms
 
@@ -368,7 +348,7 @@ GET /users/1
 - Release
 - "Can I Deploy?" Tool
 
-[comment]: # (!!! data-auto-animate)
+[comment]: # (||| data-auto-animate)
 
 ## Terms
 
@@ -377,7 +357,7 @@ GET /users/1
     - Asynchronous/Messages -> RabbitMQ, Kafka, Fire and Forget, Server Push
     - Synchronous/Messages -> gRPC/protobufs, Websockets, MQTT, Data Pipelines, AWS Lambda
 
-[comment]: # (!!! data-auto-animate)
+[comment]: # (||| data-auto-animate)
 
 ## Terms
 
@@ -387,7 +367,7 @@ GET /users/1
     - Protobuf
     - GraphQL
 
-[comment]: # (!!! data-auto-animate)
+[comment]: # (||| data-auto-animate)
 
 ## Terms
 
@@ -395,7 +375,7 @@ GET /users/1
     - gRPC
     - Websockets
 
-[comment]: # (!!! data-auto-animate)
+[comment]: # (||| data-auto-animate)
 
 ## Terms
 
@@ -403,7 +383,7 @@ GET /users/1
     - CSV
     - Protobuf
 
-[comment]: # (!!! data-auto-animate)
+[comment]: # (||| data-auto-animate)
 
 ## Terms
 
@@ -420,25 +400,25 @@ GET /users/1
 - Contract Test
 - Contract Verification
 
-[comment]: # (!!!)
+[comment]: # (|||)
 
 ## CI - Backend
 
 ![ci-backend](media/ci-backend.svg)
 
-[comment]: # (!!!)
+[comment]: # (|||)
 
 ## CI - Frontend
 
 ![ci-frontend](media/ci-frontend.svg)
 
-[comment]: # (!!!)
+[comment]: # (|||)
 
 ## Contract Test
 
 ![contract-test](media/contract-test.svg)
 
-[comment]: # (!!!)
+[comment]: # (|||)
 
 ## Contract Test - Backend
 
@@ -472,7 +452,7 @@ $client->getUser(1);
 $this->assertTrue($this->builder->verify());
 ```
 
-[comment]: # (!!! data-auto-animate)
+[comment]: # (||| data-auto-animate)
 
 ## Contract Test - Frontend
 
@@ -510,13 +490,13 @@ await pact.executeTest(async (mockserver: V3MockServer) => {
 });
 ```
 
-[comment]: # (!!! data-auto-animate)
+[comment]: # (||| data-auto-animate)
 
 ## Contract Verification
 
 ![contract-verification](media/contract-verification.svg)
 
-[comment]: # (!!!)
+[comment]: # (|||)
 
 ## Contract Verification
 
@@ -565,7 +545,7 @@ $this->assertTrue($verifier->verify());
 - Versioning
 - Local development
 
-[comment]: # (!!!)
+[comment]: # (|||)
 
 ## How to write pact consumer test?
 
@@ -573,27 +553,27 @@ $this->assertTrue($verifier->verify());
 
 [comment]: # (Image source: https://pactflow.io/blog/five-reasons-why-your-contract-testing-initiative-could-fail-and-how-to-avoid-them/)
 
-[comment]: # (!!!)
+[comment]: # (|||)
 
 ## Recommended consumer version selectors
 
 - {"mainBranch": true}  <!-- .element: class="fragment" -->
 - {"deployedOrReleased": true}  <!-- .element: class="fragment" -->
 
-[comment]: # (!!!)
+[comment]: # (|||)
 
 ## No optional attributes
 
 - No optional field  <!-- .element: class="fragment" -->
 - No empty array  <!-- .element: class="fragment" -->
 
-[comment]: # (!!!)
+[comment]: # (|||)
 
 ## Versioning
 
 Use git commit hash (sha)
 
-[comment]: # (!!!)
+[comment]: # (|||)
 
 ## Local development
 
@@ -613,7 +593,7 @@ Use read-only token
 - [Bi-Directional Contract Testing](https://docs.pactflow.io/docs/bi-directional-contract-testing)
 - [Compare schema to contract](https://pactflow.io/blog/schemas-are-not-contracts/)
 
-[comment]: # (!!!)
+[comment]: # (|||)
 
 ## References
 
@@ -621,7 +601,7 @@ Use read-only token
 - [Convince to use Pact](https://docs.pact.io/faq/convinceme)
 - [List of situations when to use or not to use Pact](https://docs.pact.io/getting_started/what_is_pact_good_for)
 
-[comment]: # (!!!)
+[comment]: # (|||)
 
 ## References
 
@@ -630,15 +610,17 @@ Use read-only token
 - [How to write good consumer tests](https://docs.pact.io/consumer)
 - [5 reasons failed to apply contract testing](https://pactflow.io/blog/five-reasons-why-your-contract-testing-initiative-could-fail-and-how-to-avoid-them/)
 
-[comment]: # (!!!)
+[comment]: # (|||)
 
 ## References
 
 - [Pending Pacts](https://docs.pact.io/pact_broker/advanced_topics/pending_pacts)
 - [WIP Pacts](https://docs.pact.io/pact_broker/advanced_topics/wip_pacts)
 
-[comment]: # (!!!)
+[comment]: # (|||)
 
 ## References
 
 - [Consumer Version Selectors](https://docs.pact.io/pact_broker/advanced_topics/consumer_version_selectors)
+
+[comment]: # (|||)
