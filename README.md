@@ -25,7 +25,9 @@ docker run --rm --name my-slides -p '8000:80' my/slides
 Install:
 
 ```shell
-python3 -m pip install git+https://gitlab.com/da_doomer/markdown-slides.git
+pip install setuptools --break-system-packages
+pip install git+https://gitlab.com/da_doomer/markdown-slides.git --break-system-packages
+sudo ln -s /home/(whoami)/.local/bin/mdslides /usr/local/bin/mdslides
 ```
 
 ### Pact
