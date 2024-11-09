@@ -1,0 +1,8 @@
+@startuml
+!theme spacelab
+[Consumer] as consumer
+[Provider] as provider
+[Pact Broker] as broker
+consumer -right--> broker: $success("define and publish contracts")
+broker -right--> provider: $success("pull contracts and verify")
+@enduml
