@@ -525,7 +525,7 @@ $this->assertTrue($builder->verify());
 
 ## Contract Verification
 
-![contract-verification](media/contract-verification.svg)
+![contract-verification](media/contract-verification.svg) <!-- .element: style="height:45vh" -->
 
 [comment]: # (|||)
 
